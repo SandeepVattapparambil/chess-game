@@ -29,7 +29,6 @@ class ChessBoard extends Component {
         this.resetGame();
     }
 
-
     resetGame = () => {
         this.board.setPosition(window.ChessUtils.FEN.startId);
         this.chess.reset();
@@ -107,6 +106,11 @@ class ChessBoard extends Component {
                             <div id="board"></div>
                         </div>
                     </div>
+                    <div className="card game-score-board">
+                        <div className="card-content grey-text">
+                            <p>Fen: ${this.state.fen}</p>
+                        </div>
+                    </div>
                 </div>
                 <div className="col s12 m5" >
                     <div className="card game-status">
@@ -125,9 +129,30 @@ class ChessBoard extends Component {
                     <div className="card game-score-board">
                         <div className="card-content grey-text">
                             <span className="card-title">{this.state.status}</span>
-
                         </div>
-
+                    </div>
+                    <div className="card game-score-board">
+                        <div className="card-content grey-text">
+                            <span className="card-title">Moves</span>
+                            <table className="striped">
+                                <thead>
+                                    <tr>
+                                        <th>Player Computer</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {this.state.pgn.length > 0 && this.state.pgn.split(/[0-9][.]/).map((item, key) => {
+                                        if (item !== '') {
+                                            return (
+                                                <tr key={key}>
+                                                    <td>{key}&nbsp; {item}</td>
+                                                </tr>
+                                            )
+                                        }
+                                    })}
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
 
