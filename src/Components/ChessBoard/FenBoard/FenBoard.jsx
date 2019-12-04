@@ -1,5 +1,13 @@
+/**
+ * Component FenBoard
+ */
 import React from 'react';
 
+/**
+ * @function FenBoard
+ * A reusable component for showing the chess FEN String
+ * @param {*} props - The input props to the component
+ */
 function FenBoard(props) {
     return (
         <div className="card game-score-board">

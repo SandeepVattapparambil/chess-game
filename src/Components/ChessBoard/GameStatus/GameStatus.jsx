@@ -1,9 +1,23 @@
+/**
+ * Component GameStatus
+ */
 import React, { useEffect } from 'react';
 
+/**
+ * @function GameStatus
+ * A component for showing the game status information
+ * @param {*} props - The input props to the component
+ */
 function GameStatus(props) {
+    //Get reference to the reset button
     let resetGameButton = React.createRef();
+    //materialize tooltip options object
     let tooltipOptions = {};
 
+    /**
+     * useEffect lifecycle hook
+     * get the tooltip element and then initialize tooltip on it using materialize Tooltip.init() method
+     */
     useEffect(() => {
         let element = resetGameButton.current;
         window.M.Tooltip.init(element, tooltipOptions);

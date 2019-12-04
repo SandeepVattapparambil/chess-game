@@ -1,7 +1,18 @@
+/**
+ * Component MovesList
+ */
 import React from 'react';
 
+/**
+ * Sub components
+ */
 import MoveRow from './MoveRow/MoveRow';
 
+/**
+ * @function MovesList
+ * A component to show various moves made by each player in order
+ * @param {*} props - The input props to the component
+ */
 function MovesList(props) {
     return (
         <div className="card game-score-board">
