@@ -17,6 +17,10 @@
     font-weight: 400;
 }
 
+.card.game-status .card-content.header {
+    border-bottom: 1px solid #cccccc59;
+}
+
 .card.game-score-board .card-content .card-title {
     font-weight: 200;
 }
