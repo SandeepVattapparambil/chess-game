@@ -1,0 +1,7 @@
+tr > td:last-child {
+    background: #fff9c4 ;
+}
+
+tr > td{
+    font-weight: 600;
+}
