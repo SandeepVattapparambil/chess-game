@@ -19,12 +19,10 @@ function GameStatus(props) {
                         className="grey lighten-2 waves-effect btn-flat right tooltipped"
                         data-position="bottom"
                         data-tooltip="Reset or start a new game"
-                        onClick={props.reset}
+                        onClick={e => props.reset('newGame')}
                         ref={resetGameButton}
                     >
-                        <i className="small material-icons left">
-                        refresh
-                        </i>
+                        <i className="small material-icons left">refresh</i>
                         Reset Game
                     </a>
                 </span>

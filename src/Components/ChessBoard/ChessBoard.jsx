@@ -34,10 +34,13 @@ class ChessBoard extends Component {
         this.resetGame();
     }
 
-    resetGame = () => {
+    resetGame = origin => {
         this.board.setPosition(window.ChessUtils.FEN.startId);
         this.chess.reset();
         this.updateGameInfo('User may start.');
+        origin && origin !== undefined
+            ? window.M.toast({ html: 'Starting new game!' })
+            : window.M.toast({ html: 'Welcome!' });
     };
 
     updateGameInfo = status => {
@@ -121,7 +124,7 @@ class ChessBoard extends Component {
                 </div>
                 <div className="col s12 m5">
                     <div className="card game-status">
-                        <GameStatus reset={this.resetGame}/>
+                        <GameStatus reset={this.resetGame} />
                     </div>
                     <TurnStatus turn={this.state.status} />
                     <MovesList pgn={this.state.pgn} />

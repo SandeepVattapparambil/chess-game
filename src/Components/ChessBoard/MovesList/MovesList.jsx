@@ -7,7 +7,6 @@ function MovesList(props) {
         <div className="card game-score-board">
             <div className="card-content grey-text">
                 <span className="card-title">
-                    {' '}
                     <i className="small material-icons left">directions_walk</i>
                     Moves
                 </span>
