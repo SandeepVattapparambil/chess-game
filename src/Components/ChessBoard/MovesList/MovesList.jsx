@@ -5,8 +5,10 @@ import MoveRow from './MoveRow/MoveRow';
 function MovesList(props) {
     return (
         <div className="card game-score-board">
-            <div className="card-content grey-text">
+             <div className="card-content grey-text">
                 <span className="card-title">Moves</span>
+            </div>
+            <div className="card-content table grey-text">
                 <table className="table">
                     <thead>
                         <tr>
