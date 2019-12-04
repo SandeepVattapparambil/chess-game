@@ -5,6 +5,8 @@ This projects aims at developing a complete client-side rendered Chess game app 
 ## Available Scripts
 
 In the project directory, you can run:
+### `npm i`
+Install all the dependencies first prior to the build process.
 
 ### `npm start`
 
