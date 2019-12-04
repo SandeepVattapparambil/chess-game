@@ -7,7 +7,7 @@ function TurnStatus(props) {
                 <span className="card-title">{props.turn}</span>
             </div>
         </div>
-    )
+    );
 }
 
 export default TurnStatus;

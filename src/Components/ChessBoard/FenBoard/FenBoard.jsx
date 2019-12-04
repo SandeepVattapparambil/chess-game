@@ -7,7 +7,7 @@ function FenBoard(props) {
                 <p>Fen: {props.fen}</p>
             </div>
         </div>
-    )
-};
+    );
+}
 
 export default FenBoard;
