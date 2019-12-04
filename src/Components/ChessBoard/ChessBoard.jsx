@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import './style.css';
 
+import FenBoard from './FenBoard/FenBoard';
+import GameStatus from './GameStatus/GameStatus';
+import TurnStatus from "./TurnStatus/TurnStatus";
+
 class ChessBoard extends Component {
     constructor(props) {
         super(props);
@@ -106,31 +110,13 @@ class ChessBoard extends Component {
                             <div id="board"></div>
                         </div>
                     </div>
-                    <div className="card game-score-board">
-                        <div className="card-content grey-text">
-                            <p>Fen: ${this.state.fen}</p>
-                        </div>
-                    </div>
+                    <FenBoard fen={this.state.fen} />
                 </div>
                 <div className="col s12 m5" >
                     <div className="card game-status">
-                        <div className="card-content grey-text">
-                            <span className="card-title">Game Status</span>
-                            <div className="chip blue lighten-2"> Player
-                            <img src="img/user.png" alt="player" />
-                            </div>
-                            &nbsp; X &nbsp;
-                            <div className="chip red lighten-3"> Computer
-                            <img src="img/pc.png" alt="player" />
-                            </div>
-                        </div>
-
+                        <GameStatus />
                     </div>
-                    <div className="card game-score-board">
-                        <div className="card-content grey-text">
-                            <span className="card-title">{this.state.status}</span>
-                        </div>
-                    </div>
+                    <TurnStatus turn={this.state.status} />
                     <div className="card game-score-board">
                         <div className="card-content grey-text">
                             <span className="card-title">Moves</span>
